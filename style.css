@@ -27,7 +27,11 @@ body{
     cursor: pointer;
     transform: scale(1);
     transform-style: preserve-3d;
-    transition: trasform .9s;
+    transition: transform .9s;
+}
+.card:active{
+    transform: scale(0.97);
+    transition: transform .3s;
 }
 
 .card-front,
@@ -39,4 +43,11 @@ body{
     border-radius: 5px;
     background: rgb(92, 187, 182);
     backface-visibility: hidden;
+}
+
+.card-front{
+    transform: rotateY(180deg);
+}
+.card.flip{
+    transform: rotateY(180deg);
 }
